@@ -1,1 +1,34 @@
-/* pages/goods_list/index.wxss */
+.frist_tab .goods_group {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.frist_tab .goods_group .goods_img {
+  flex: 1;
+  text-align: center;
+  padding: 20px 0;
+}
+.frist_tab .goods_group .goods_img image {
+  width: 70%;
+}
+.frist_tab .goods_group .goods_wrap {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.frist_tab .goods_group .goods_wrap .goods_name {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 30rpx;
+  color: black;
+}
+.frist_tab .goods_group .goods_wrap .goods_price {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}

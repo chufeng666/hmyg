@@ -1,0 +1,54 @@
+.cate_container {
+  /* 高度 等于视口的高度 - 头部搜索框的高度 
+     calc 100vh 不要less来编译 calc中的代码
+  */
+  // 原样输出不要编译
+  height: ~'calc(100vh + 90rpx)';
+  display: flex;
+  .left_menu {
+    // 子项高度默认等于父相高度
+    flex: 1;
+    .menu_title {
+      height: 80rpx;
+      justify-content: center;
+      align-items: center;
+      font-size: 30rpx;
+      display: flex;
+    }
+    .active {
+      color: var(--themeColor);
+      border-left: 4rpx solid currentColor;
+    }
+  }
+  .right_menu {
+    flex: 3;
+    .good_group {
+      .good_title {
+        height: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .delimiter {
+          color: #ccc;
+        }
+        .good_name {
+          font-size: 30rpx;
+          color: #000;
+          padding: 0 10rpx;
+        }
+      }
+      .good_list {
+        display: flex;
+        // 换行
+        flex-wrap: wrap;
+        navigator {
+          width: 33.33%;
+          text-align: center;
+          image {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

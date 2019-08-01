@@ -1,2 +1,23 @@
-<!--pages/goods_list/index.wxml-->
-<text>pages/goods_list/index.wxml</text>
+<SearchInput></SearchInput>
+<Tabs tabs="{{tabs}}" binditenChange="handleItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="frist_tab">
+      <view class="goods_group" wx:for="{{goodsList}}" wx:key="goods_id">
+        <!-- 左侧图片 -->
+        <view class="goods_img">
+          <image mode="widthFix" src="{{item.goods_small_logo||'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1564635220&di=d93d8f7df634eb199bc7f07593eafe01&src=http://img.zcool.cn/community/01320355431ac00000019ae902cb6d.jpg@1280w_1l_2o_100sh.png'}}"></image>
+        </view>
+        <!-- 右侧商品信息 -->
+        <view class="goods_wrap">
+          <view class="goods_name">
+            <!-- lorem 随机生成文字 -->
+            {{item.goods_name}}
+          </view>
+          <view class="goods_price">￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{tabs[1].isActive}}">正在开发中......</block>
+  <block wx:if="{{tabs[2].isActive}}">正在开发中......</block>
+</Tabs>

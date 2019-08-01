@@ -1,0 +1,43 @@
+// 轮播图样式
+.index_swiper {
+  swiper {
+    height: 340rpx;
+  }
+}
+
+// 分类导航样式
+.index_cate {
+  display: flex;
+  navigator {
+    flex: 1;
+    padding: 25rpx;
+  }
+}
+
+// 楼层商品区域
+.index_floor {
+  .floor_item {
+    .product_list {
+      padding: 0 10rpx;
+      // 清除浮动 (保险起见)
+      overflow: hidden;
+      navigator {
+        width: 33.33%;
+        float: left;
+        // /* 后四个超链接 */
+        &:nth-last-child(-n + 4) {
+          // 原图的宽度 / 原图的发哦度 = 变化后的宽度 / 变化后的高度
+          height: 750rpx / 3 * 386 / 232 / 2;
+          border-left: 10rpx solid #fff;
+        }
+        // 后两个超链接
+        &:nth-last-child(-n + 2) {
+          border-top: 10rpx solid #fff;
+        }
+        image {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
